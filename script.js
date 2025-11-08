@@ -1,7 +1,16 @@
-const FirstNumber = document.getElementById("UserInput1");
-const SecondNumber = document.getElementById("UserInput2");
-const calcButton = document.getElementsById("UserTrigger");
+const PI = 3.14;
+const FirstNumber = document.getElementById("radiusInput");
+const calcButton = document.getElementById("calcButton");
+const outputContainer = document.getElementById("output");
 
-// calcButton.addEventListener('click'; someText){
-//     console.log("Hello, World")
-// }
+
+
+calcButton.addEventListener('click', handleClick);
+
+
+function handleClick(){
+    let radius = FirstNumber.value;
+    let laukums = PI * radius * radius;
+    let garums = 2 * PI * radius;
+    outputContainer.innerHTML = `laukums: ${laukums} R.L.: ${garums}`;
+}
